@@ -8,8 +8,16 @@
  <script>
 
   
-var nftElements = document.querySelectorAll('a-nft');
-  alert(nftElements.length);
+var entities = document.querySelectorAll('a-scene a-entity');
+
+// Iterate over each entity
+entities.forEach(function(entity) {
+    // Check if the entity has the 'a-nft' component
+    if (entity.components['a-nft']) {
+        // Do something with the entity
+        console.log(entity);
+    }
+});
 
 // Loop through the NodeList of <a-nft> elements
 nftElements.forEach(function(element) {
