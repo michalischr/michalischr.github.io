@@ -10,7 +10,12 @@
     init: function () {
       this.el.sceneEl.addEventListener('markerFound', () => {
        alert(this.el.id);
-     
+     if(this.el.id==='nft'){
+      document.getElementById('timg').src="../trex-image-big.jpeg";
+     }
+       elseif(this.el.id==='nf2'){
+        document.getElementById('timg').src="../567_2.jpg";
+       }
        document.getElementById('timg').hidden=false;
       
         //window.location = 'https://github.com/AR-js-org/AR.js';
