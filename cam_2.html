@@ -38,6 +38,7 @@
   </a-assets>
           
         <a-nft 
+          markerhandler
             type='nft' url='../img_forest' id="nft"
             smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
 
@@ -74,11 +75,12 @@
 </html>
 
  <script>
-
-  var p = document.getElementById('nft');
-   p.addEventListener('markerFound', function () {
-     
-     document.getElementById('plane').src="../567_2.jpg";
-   
-   }
+  AFRAME.registerComponent('markerhandler', {
+    init: function () {
+      this.el.sceneEl.addEventListener('markerFound', () => {
+        // redirect to custom URL
+        window.location = 'https://github.com/AR-js-org/AR.js';
+      });
+  });
+  },
 </script>
