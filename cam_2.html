@@ -9,7 +9,7 @@
   AFRAME.registerComponent('markerhandler', {
     init: function () {
       this.el.sceneEl.addEventListener('markerFound', () => {
-       alert(this.el.sceneEl);
+       alert(this);
      
        document.getElementById('timg').hidden=false;
       
