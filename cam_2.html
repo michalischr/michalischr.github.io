@@ -9,8 +9,8 @@
   AFRAME.registerComponent('markerhandler', {
     init: function () {
       this.el.sceneEl.addEventListener('markerFound', () => {
-      
-     if(this.el.id==='nft'){
+      alert(this.el.sceneEl.id);
+     if(this.el.sceneEl.id==='nft'){
       document.getElementById('timg').src="../trex-image-big.jpeg";
      }
        else if(this.el.id==='nf2'){
