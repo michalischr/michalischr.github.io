@@ -6,14 +6,19 @@
 
 
  <script>
-  AFRAME.registerComponent('markerhandler', {
-    init: function () {
-      this.el.sceneEl.addEventListener('markerFound', () => {
+
+  
+var nftElements = document.querySelectorAll('a-nft');
+
+// Loop through the NodeList of <a-nft> elements
+nftElements.forEach(function(element) {
+
+ this.addEventListener('markerFound', () => {
       
-     if(this.el.id==='nft'){
+     if(this.id==='nft'){
       document.getElementById('timg').src="../trex-image-big.jpeg";
      }
-       else if(this.el.id==='nf2'){
+       else if(this.id==='nf2'){
         document.getElementById('timg').src="../567_2.jpg";
        }
        else{
@@ -25,14 +30,50 @@
         //window.location = 'https://github.com/AR-js-org/AR.js';
       });
 
-      this.el.sceneEl.addEventListener('markerLost', () => {
+
+
+
+ this.addEventListener('markerLost', () => {
      
        document.getElementById('timg').hidden=true;
       
        
       });
-  }
-  })
+ 
+
+
+ 
+});
+
+
+  
+  // AFRAME.registerComponent('markerhandler', {
+  //   init: function () {
+  //     this.el.sceneEl.addEventListener('markerFound', () => {
+      
+  //    if(this.el.id==='nft'){
+  //     document.getElementById('timg').src="../trex-image-big.jpeg";
+  //    }
+  //      else if(this.el.id==='nf2'){
+  //       document.getElementById('timg').src="../567_2.jpg";
+  //      }
+  //      else{
+  // document.getElementById('timg').src="../trex-image-big.jpeg";
+
+  //      }
+  //      document.getElementById('timg').hidden=false;
+      
+  //       //window.location = 'https://github.com/AR-js-org/AR.js';
+  //     });
+
+  //     this.el.sceneEl.addEventListener('markerLost', () => {
+     
+  //      document.getElementById('timg').hidden=true;
+      
+       
+  //     });
+  // }
+  // })
 </script>
 
 
@@ -82,7 +123,7 @@
   </a-assets>
           
         <a-nft 
-          markerhandler
+<!--           markerhandler -->
             type='nft'
           url='../img_forest' id="nft"
             smooth='true'
@@ -114,7 +155,7 @@
 
 
  <a-nft 
-          markerhandler
+<!--           markerhandler -->
             type='nft'
           url='../trex' id="nf2"
             smooth='true'
