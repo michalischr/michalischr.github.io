@@ -9,14 +9,16 @@
   AFRAME.registerComponent('markerhandler', {
     init: function () {
       this.el.sceneEl.addEventListener('markerFound', () => {
+       alert('here');
+       document.getElementById('timg').hidden=false;
       
-        window.location = 'https://github.com/AR-js-org/AR.js';
+        //window.location = 'https://github.com/AR-js-org/AR.js';
       });
   }
   })
 </script>
 
-<img id="timg" src="../567_2.jpg" width="200" height="200">
+<img hidden="true" id="timg" src="../567_2.jpg" width="200" height="200" style="z-index:1;">
   
 <style>
   .arjs-loader {
