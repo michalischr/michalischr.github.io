@@ -36,12 +36,12 @@
   </a-assets>
           
         <a-nft 
-            type='nft' url='../img_forest'
+            type='nft' url='../img_forest' id="nft"
             smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
 
-<a-plane src="#pic" position="0 0 -4" rotation="-90 0 0" width="400" height="400" static-body>
-<!--   <a-image src="#pic" width="100" height="100" position="fixed" rotation="90 0 180"></a-image> -->
-</a-plane>
+<!-- <a-plane src="#pic" position="0 0 -4" rotation="-90 0 0" width="400" height="400" static-body>
+   <a-image src="#pic" width="100" height="100" position="fixed" rotation="90 0 180"></a-image>
+</a-plane> -->
 
           
 <!--           <img src="../trex-image-big.jpeg" width="600" height="400"> -->
@@ -70,6 +70,9 @@
     </a-scene>
 </body>
 
-<!-- <script>
-  var p = document.getElementbyId('')
-</script> -->
+ <script>
+  var p = document.getElementById('nft');
+   nft.addEventListener('markerFound', function () {
+     alert('found it');
+   }
+</script>
