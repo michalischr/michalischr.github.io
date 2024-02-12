@@ -39,7 +39,7 @@
             type='nft' url='../img_forest' id="nft"
             smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
 
- <a-plane src="#pic" position="0 0 -4" rotation="-90 0 0" width="400" height="400" static-body>
+ <a-plane id="plane" src="#pic" position="0 0 -4" rotation="-90 0 0" width="400" height="400" static-body>
 <!--    <a-image src="#pic" width="100" height="100" position="fixed" rotation="90 0 180"></a-image> -->
 </a-plane>
 
@@ -74,6 +74,8 @@
 
   var p = document.getElementById('nft');
    p.addEventListener('markerFound', function () {
-    this.src="../567_2.jpg";
+     
+     document.getElementById('plane').src="../567_2.jpg";
+   
    }
 </script>
