@@ -20,6 +20,7 @@ entities.forEach(function(entity) {
 });
 
 // Loop through the NodeList of <a-nft> elements
+  var nftElements = document.querySelectorAll('a-nft');
 nftElements.forEach(function(element) {
 
  this.addEventListener('markerFound', () => {
