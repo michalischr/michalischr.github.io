@@ -10,7 +10,7 @@
   AFRAME.registerComponent('markerhandler', {
    multiple: true,
     init: function () {
-     // alert(this.el.id);
+      alert(this.el.id);
       this.el.sceneEl.addEventListener('markerFound', () => {
       
      if(this.el.id==='nft'){
@@ -128,6 +128,28 @@
 
      
  
+        </a-nft>
+
+      <a-nft 
+       markerhandler
+            type='nft'
+          url='../trex' id="nf3"
+            smooth='true'
+          smoothCount='10'
+          smoothTolerance='0.01'
+          smoothThreshold='5'>
+
+        </a-nft>
+
+      <a-nft 
+       markerhandler
+            type='nft'
+          url='../trex' id="nf4"
+            smooth='true'
+          smoothCount='10'
+          smoothTolerance='0.01'
+          smoothThreshold='5'>
+
         </a-nft>
 
 
