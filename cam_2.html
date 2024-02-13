@@ -2,7 +2,7 @@
 <html>
 <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
 
 
  <script>
@@ -10,7 +10,7 @@
   AFRAME.registerComponent('markerhandler', {
    multiple: true,
     init: function () {
-      alert(this.el.id);
+       alert(this.el.id);
       this.el.sceneEl.addEventListener('markerFound', () => {
       
      if(this.el.id==='nft'){
@@ -85,7 +85,8 @@
   </a-assets>
           
         <a-nft 
-         markerhandler
+         mindar-image-target="targetIndex: 0"
+<!--          markerhandler -->
             type='nft'
           url='../img_forest' id="nft"
             smooth='true'
@@ -117,13 +118,15 @@
 
 
  <a-nft 
-       markerhandler
+<!--        markerhandler -->
+  mindar-image-target="targetIndex: 1"
             type='nft'
           url='../trex' id="nf2"
             smooth='true'
           smoothCount='10'
           smoothTolerance='0.01'
           smoothThreshold='5'>
+  
 
 
      
@@ -131,7 +134,8 @@
         </a-nft>
 
       <a-nft 
-       markerhandler
+<!--        markerhandler -->
+       mindar-image-target="targetIndex: 2"
             type='nft'
           url='../trex' id="nf3"
             smooth='true'
@@ -142,7 +146,8 @@
         </a-nft>
 
       <a-nft 
-       markerhandler
+<!--        markerhandler -->
+       mindar-image-target="targetIndex: 3"
             type='nft'
           url='../trex' id="nf4"
             smooth='true'
