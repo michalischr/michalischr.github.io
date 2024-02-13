@@ -7,16 +7,12 @@
 
  <script>
 
-
-  var entities = document.querySelector('a-nft');
-  console.log(entities);
-
   AFRAME.registerComponent('markerhandler', {
    multiple: true,
     init: function () {
        
-      this.el.sceneEl.addEventListener('markerFound', () => {
-      alert(this);
+      this.el.addEventListener('markerFound', () => {
+      alert(this.el.id);
      if(this.el.id==='nft'){
       document.getElementById('timg').src="../trex-image-big.jpeg";
      }
@@ -32,7 +28,7 @@
         //window.location = 'https://github.com/AR-js-org/AR.js';
       });
 
-      this.el.sceneEl.addEventListener('markerLost', () => {
+      this.el.addEventListener('markerLost', () => {
      
        document.getElementById('timg').hidden=true;
       
