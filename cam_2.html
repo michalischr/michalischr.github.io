@@ -12,7 +12,7 @@
     init: function () {
        
       this.el.sceneEl.addEventListener('markerFound', () => {
-      alert(this.el.id);
+     // alert(this.el.id);
      if(this.el.id==='nft'){
       document.getElementById('timg').src="../trex-image-big.jpeg";
      }
@@ -85,6 +85,7 @@
   </a-assets>
           
         <a-nft 
+         markerhandler
             type='nft'
           url='../img_forest' id="nft"
             smooth='true'
@@ -116,7 +117,7 @@
 
 
  <a-nft 
-
+markerhandler
             type='nft'
           url='../trex' id="nf2"
             smooth='true'
@@ -131,7 +132,7 @@
         </a-nft>
 
       <a-nft 
-
+markerhandler
      
             type='nft'
           url='../trex' id="nf3"
@@ -143,6 +144,7 @@
         </a-nft>
 
       <a-nft   
+       markerhandler
             type='nft'
           url='../trex' id="nf4"
             smooth='true'
