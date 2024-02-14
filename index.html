@@ -91,6 +91,50 @@
         }
     </script>
 
+     <button onclick="generateISET()">Generate ISET</button>
+
+    <script>
+        // Function to generate ISET file from uploaded image
+        function generateISET() {
+            const imageInput = document.getElementById('imageInput');
+            const file = imageInput.files[0];
+            
+            if (!file) {
+                console.error('No file selected');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const imageData = event.target.result;
+                
+                // Generate ISET content
+                const isetContent = `
+                    {
+                        "format": "iset",
+                        "version": 1,
+                        "images": [
+                            {
+                                "name": "${file.name}",
+                                "path": "${file.name}"
+                            }
+                        ]
+                    }
+                `;
+                
+                // Create a blob from the ISET content
+                const blob = new Blob([isetContent], { type: 'application/json' });
+                
+                // Create a temporary link element to trigger download
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = 'custom-marker.iset';
+                link.click();
+            };
+            reader.readAsDataURL(file);
+        }
+    </script>
+
 
 
 
