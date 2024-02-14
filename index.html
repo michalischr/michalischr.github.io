@@ -48,7 +48,7 @@
                 // Create a temporary link element to trigger download
                 const link = document.createElement('a');
                 link.href = URL.createObjectURL(blob);
-                link.download = file.name.replace(/\.[^/.]+$/, "") + '.iset';
+                link.download = file.name.replace(/\.[^/.]+$/, "") + '.fset';
                 link.click();
             };
             reader.readAsDataURL(file);
@@ -84,7 +84,7 @@
                 // Create a temporary link element to trigger download
                 const link = document.createElement('a');
                 link.href = URL.createObjectURL(blob);
-                link.download = 'custom-marker.fset3';
+                link.download = file.name.replace(/\.[^/.]+$/, "") + '.fset3';
                 link.click();
             };
             reader.readAsDataURL(file);
@@ -128,7 +128,7 @@
                 // Create a temporary link element to trigger download
                 const link = document.createElement('a');
                 link.href = URL.createObjectURL(blob);
-                link.download = 'custom-marker.iset';
+                link.download = file.name.replace(/\.[^/.]+$/, "") + '.iset';
                 link.click();
             };
             reader.readAsDataURL(file);
