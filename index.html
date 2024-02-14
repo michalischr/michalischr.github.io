@@ -17,6 +17,52 @@
 <div><a href="cam_2.html">Go to camera 2 </a></div>
     <br>
     <div><a href="cam_3.html">Go to camera 3</a></div>
+
+
+
+
+  <input type="file" accept="image/*" id="imageInput">
+    <button onclick="generateFSET()">Generate FSET</button>
+
+    <script>
+        // Function to generate FSET file from uploaded image
+        function generateFSET() {
+            const imageInput = document.getElementById('imageInput');
+            const file = imageInput.files[0];
+            
+            if (!file) {
+                console.error('No file selected');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const imageData = event.target.result;
+                
+                // Generate FSET content
+                const fsetContent = `markerName,0,0\n${file.name},${file.type}\n`;
+                
+                // Create a blob from the FSET content
+                const blob = new Blob([fsetContent], { type: 'text/plain' });
+                
+                // Create a temporary link element to trigger download
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = 'custom-marker.fset';
+                link.click();
+            };
+            reader.readAsDataURL(file);
+        }
+    </script>
+
+
+
+
+
+
+
+
+    
   
     
 </body>
