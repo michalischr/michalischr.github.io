@@ -48,7 +48,7 @@
                 // Create a temporary link element to trigger download
                 const link = document.createElement('a');
                 link.href = URL.createObjectURL(blob);
-                link.download = 'custom-marker.fset';
+                link.download = file.name.replace(/\.[^/.]+$/, "") + '.iset';
                 link.click();
             };
             reader.readAsDataURL(file);
