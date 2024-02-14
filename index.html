@@ -55,6 +55,42 @@
         }
     </script>
 
+     <button onclick="generateFSET3()">Generate FSET3</button>
+
+    <script>
+        // Function to generate FSET3 file from uploaded image
+        function generateFSET3() {
+            const imageInput = document.getElementById('imageInput');
+            const file = imageInput.files[0];
+            
+            if (!file) {
+                console.error('No file selected');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const imageData = event.target.result;
+                
+                // Generate FSET3 content
+                const fset3Content = `
+                    {"format": "fset3", "version": 3}
+                    {"name": "${file.name}", "type": "${file.type}", "patternRatio": 0.5, "matrix": [1,0,0,0,1,0,0,0,1]}
+                `;
+                
+                // Create a blob from the FSET3 content
+                const blob = new Blob([fset3Content], { type: 'application/json' });
+                
+                // Create a temporary link element to trigger download
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = 'custom-marker.fset3';
+                link.click();
+            };
+            reader.readAsDataURL(file);
+        }
+    </script>
+
 
 
 
