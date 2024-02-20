@@ -32,7 +32,7 @@
         document.getElementById('timg').src="../567_2.jpg";
        }
   else if(this.el.id==='nf7'){
-   alert('hey trex');
+  
         document.getElementById('timg').src="../trex-image-big.jpeg";
        }
    else if(this.el.id==='nf6'){
@@ -101,8 +101,8 @@
         renderer="logarithmicDepthBuffer: true; precision: medium;"
         embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
        <a-assets>
-    <img id="pic"  src="../trex-image-big.jpeg">
-  </a-assets>
+          <img id="pic"  src="../trex-image-big.jpeg">
+       </a-assets>
           
         <a-nft 
          markerhandler
@@ -196,7 +196,7 @@ markerhandler
         </a-nft>
 
         <a-nft 
-markerhandler
+
             type='nft' id="nf7"
           url='../trex' 
             smooth='true'
@@ -204,7 +204,7 @@ markerhandler
           smoothTolerance='0.01'
           smoothThreshold='5'>
                <a-entity
-                gltf-model='../scene.gltf'
+                gltf-model='../scene'
                 scale="5 5 5"
                 position="150 300 -100"
                 >
