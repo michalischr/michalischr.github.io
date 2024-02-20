@@ -19,8 +19,11 @@
        else if(this.el.id==='nf2'){
         document.getElementById('timg').src="../567_2.jpg";
        }
+        else if(this.el.id==='nf3'){
+        document.getElementById('timg').src="../markers/bottle.jpg";
+       }
        else{
-  document.getElementById('timg').src="../trex-image-big.jpeg";
+  document.getElementById('timg').src="../markers/aaa (1).jpg";
 
        }
        document.getElementById('timg').hidden=false;
@@ -123,6 +126,37 @@ markerhandler
   
  
         </a-nft>
+
+
+
+ <a-nft 
+markerhandler
+            type='nft'
+          url='../markers/bottle' id="nf3"
+            smooth='true'
+          smoothCount='10'
+          smoothTolerance='0.01'
+          smoothThreshold='5'>
+  
+ 
+        </a-nft>
+
+      <a-nft 
+markerhandler
+            type='nft'
+          url='../markers/aaa (1)' id="nf4"
+            smooth='true'
+          smoothCount='10'
+          smoothTolerance='0.01'
+          smoothThreshold='5'>
+  
+ 
+        </a-nft>
+
+
+
+
+     
 
 <a-entity camera></a-entity>
     </a-scene>
