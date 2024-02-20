@@ -195,22 +195,7 @@ markerhandler
  
         </a-nft>
 
-        <a-nft 
-
-            type='nft'
-          url='../trex' 
-            smooth='true'
-          smoothCount='10'
-          smoothTolerance='0.01'
-          smoothThreshold='5'>
-               <a-entity
-                gltf-model='../scene.gltf'
-                scale="5 5 5"
-                position="50 150 0"
-                >
-            </a-entity> 
- 
-        </a-nft>
+       
 
         <a-nft 
 markerhandler
@@ -305,6 +290,40 @@ markerhandler
 
 <a-entity camera></a-entity>
     </a-scene>
+
+
+
+
+<a-scene
+ 
+ vr-mode-ui='enabled: false;'
+        renderer="logarithmicDepthBuffer: true; precision: medium;"
+        embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;' 
+ >
+  <a-nft 
+
+            type='nft'
+          url='../trex' 
+            smooth='true'
+          smoothCount='10'
+          smoothTolerance='0.01'
+          smoothThreshold='5'>
+               <a-entity
+                gltf-model='../scene.gltf'
+                scale="5 5 5"
+                position="50 150 0"
+                >
+            </a-entity> 
+ 
+        </a-nft>
+</a-scene>
+
+
+
+
+
+
+ 
 </body>
 </html>
 
