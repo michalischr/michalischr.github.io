@@ -29,6 +29,13 @@
 	
 	<a-sphere gps-entity-place="latitude: 34.860226602351254; longitude: 33.58967084322128;"  radius=3 color=black></a-sphere>
 
+	       <a-text
+        value="This content will always face you."
+        look-at="[gps-camera]"
+        scale="50 50 50"
+        gps-entity-place="latitude: 34.85985245130208; longitude: 33.5915296140686;"
+      ></a-text>
+
 <!-- 	    <a-entity gltf-model="./scene.gltf"   gps-entity-place="latitude: 34.860226602351254; longitude: 33.58967084322128;" animation-mixer/>   -->
 		
 		<a-camera id="camera" user-height="1.8" gps-camera-position gps-camera-rotation gps-camera-debug></a-camera>
