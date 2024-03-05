@@ -3,21 +3,17 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Location Based AR.js demo</title>
-<!--    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script> -->
+<!--    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>  -->
+	  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 
-<!-- <script src='vendor/ar.js/aframe/build/aframe-ar.js'></script> -->
-<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
- <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+ <script src='vendor/ar.js/aframe/build/aframe-ar.js'></script>
 
-
-	  
 <!-- <script>ARjs.Context.baseURL = 'vendor/ar.js/three.js/'</script> -->
 
-<!--  <script src="../src/gps-camera-debug.js"></script>
+ <script src="../src/gps-camera-debug.js"></script>
 <script src="../src/gps-camera-position.js"></script>
 <script src="../src/gps-camera-rotation.js"></script>
-<script src="../src/gps-entity-place.js"></script>  -->
+<script src="../src/gps-entity-place.js"></script> 
   </head>
 
   <body style="margin: 0; overflow: hidden;">
@@ -42,10 +38,10 @@
 
 
 	    
- <a-entity gltf-model="./Canon_40D.gltf"   gps-entity-place="latitude: 34.859922879864875; longitude: 33.59041381511842;" animation-mixer/>
+<!--  <a-entity gltf-model="./Canon_40D.gltf"   gps-entity-place="latitude: 34.859922879864875; longitude: 33.59041381511842;" animation-mixer/>
 	   <a-entity gltf-model="./Fox.glb"   gps-entity-place="latitude: 34.85985245130208; longitude: 33.5915296140686;" animation-mixer/>
  <a-entity gltf-model="./AntiqueCamera.gltf"   gps-entity-place="latitude: 34.86059634995135; longitude: 33.59181661043319;" animation-mixer/>
-	    <a-entity gltf-model="./scene.gltf"   gps-entity-place="latitude: 34.860226602351254; longitude: 33.58967084322128;" animation-mixer/> 
+	    <a-entity gltf-model="./scene.gltf"   gps-entity-place="latitude: 34.860226602351254; longitude: 33.58967084322128;" animation-mixer/>  -->
 		
 		<a-camera id="camera" user-height="1.8" gps-camera-position gps-camera-rotation gps-camera-debug></a-camera>
     </a-scene>
