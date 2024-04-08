@@ -18,8 +18,14 @@
 <!--   LIDL  -->
      <a-entity material='color: blue' geometry='primitive: box' gps-new-entity-place="latitude: 34.859799629840374; longitude: 33.5917280975357;" scale="1 1 1" position="0 20 0"></a-entity>
 
-    <a-entity material='color: green' geometry='primitive: box' gps-new-entity-place="latitude: 34.859799629840374; longitude: 33.5917280975357;" scale="1 1 1" position="0 20 0"></a-entity>
+    <a-entity id="green" material='color: green' geometry='primitive: box' gps-new-entity-place="latitude: 34.859799629840374; longitude: 33.5917280975357;" scale="10 10 10" position="0 20 0"></a-entity>
     
 </a-scene>
 </body>
+
+    <script>
+        document.querySelector('green').addEventListener('click,function(e){
+            window.alert('green was touched');
+        })
+    </script>
 </html>
