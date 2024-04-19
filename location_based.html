@@ -8,6 +8,22 @@
 <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
 
 </head>
+
+
+ <script>
+      AFRAME.registerComponent("event-listener", {
+        init: function() {
+          this.el.addEventListener("click", function(e) {
+            e.target.setAttribute('scale', {x: 2, y: 2, z: 2});
+              alert('hey')
+            });
+          }
+      });
+</script>
+
+
+
+    
 <body>
 <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
     
@@ -60,16 +76,7 @@
         
     </script> -->
 
- <script>
-      AFRAME.registerComponent("event-listener", {
-        init: function() {
-          this.el.addEventListener("click", function(e) {
-            e.target.setAttribute('scale', {x: 2, y: 2, z: 2});
-              alert('hey')
-            });
-          }
-      });
-</script>
+
 
 
 
