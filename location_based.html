@@ -99,7 +99,30 @@
  >
 
 
-		<a href="#home" class="button">Home</a>
+	    <a-plane 
+                rotation="180 0 180"
+                color = "green"
+                width="50" 
+                height="40"
+                
+                >
+	    <!-- HTML content using a-html component -->
+            <a-html
+                id="html-container"
+                width="3" height="3"
+                position="0 0 0.1"
+                scale="1 1 1"
+            >
+                <!-- Your HTML content goes here -->
+                <div style="background-color: white; padding: 10px; border-radius: 5px;">
+                    <h2>Hello from A-Frame!</h2>
+                    <p>This is a <strong>div</strong> element placed within an A-Frame scene.</p>
+                </div>
+            </a-html>
+		    </a-plane>
+
+
+<!-- 		<a href="#home" class="button">Home</a> -->
 	
         
 <!--     <img src="../567_1.jpg" alt="image"> -->
