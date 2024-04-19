@@ -5,6 +5,8 @@
 <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
 <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
 <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
+<script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+
 </head>
 <body>
 <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
@@ -18,9 +20,9 @@
     <a-entity material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: 34.85850989529276; longitude: 33.589520639516444;" scale="10 10 10"></a-entity>
     
 <!--   LIDL  -->
-     <a-entity material='color: blue' geometry='primitive: box' gps-new-entity-place="latitude: 34.859799629840374; longitude: 33.5917280975357;" scale="1 1 1" position="0 20 0"></a-entity>
+     <a-entity  material='color: blue' geometry='primitive: box' gps-new-entity-place="latitude: 34.859799629840374; longitude: 33.5917280975357;" scale="1 1 1" position="0 20 0"></a-entity>
 
-    <a-entity id="green" material='color: green' geometry='primitive: box' gps-new-entity-place="latitude: 34.859799629840374; longitude: 33.5917280975357;" scale="5 5 5" position="0 30 0"></a-entity>
+    <a-entity camera look-controls mouse-cursor id="green" material='color: green' geometry='primitive: box' gps-new-entity-place="latitude: 34.859799629840374; longitude: 33.5917280975357;" scale="5 5 5" position="0 30 0"></a-entity>
     
 </a-scene>
 </body>
