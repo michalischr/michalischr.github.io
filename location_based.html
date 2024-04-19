@@ -13,6 +13,7 @@
  <script>
       AFRAME.registerComponent("event-listener", {
         init: function() {
+         alert(this.el);
           this.el.addEventListener("click", function(e) {
               alert('hey');
             });
@@ -35,10 +36,10 @@
         </a-camera>
     </a-entity>
     
-    <a-entity event-listener material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: 34.85850989529276; longitude: 33.589520639516444;" scale="10 10 10"></a-entity>
+    <a-entity material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: 34.85850989529276; longitude: 33.589520639516444;" scale="10 10 10"></a-entity>
     
 <!--   LIDL  -->
-     <a-entity event-listener  material='color: blue' geometry='primitive: box' gps-new-entity-place="latitude: 34.859799629840374; longitude: 33.5917280975357;" scale="1 1 1" position="0 20 0"></a-entity>
+     <a-entity  material='color: blue' geometry='primitive: box' gps-new-entity-place="latitude: 34.859799629840374; longitude: 33.5917280975357;" scale="1 1 1" position="0 20 0"></a-entity>
 
     <a-entity event-listener id="green" material='color: green' geometry='primitive: box' gps-new-entity-place="latitude: 34.859799629840374; longitude: 33.5917280975357;" scale="5 5 5" position="0 30 0"></a-entity>
     
