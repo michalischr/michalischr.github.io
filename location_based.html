@@ -10,14 +10,29 @@
 </head>
 
 
- <script>
+<!--  <script>
       AFRAME.registerComponent("event-listener", {
         init: function() {
-         alert(this.el);
+         alert(this);
           this.el.addEventListener("click", function(e) {
               alert('hey');
             });
           this.el.addEventListener("touchstart", function(e) {
+              alert('hey');
+            });
+          }
+      });
+</script> -->
+
+
+  <script>
+      AFRAME.registerComponent("event-listener", {
+        init: function() {
+         alert(this);
+          this.addEventListener("click", function(e) {
+              alert('hey');
+            });
+          this.addEventListener("touchstart", function(e) {
               alert('hey');
             });
           }
