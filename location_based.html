@@ -14,8 +14,10 @@
       AFRAME.registerComponent("event-listener", {
         init: function() {
           this.el.addEventListener("click", function(e) {
-            e.target.setAttribute('scale', {x: 2, y: 2, z: 2});
-              alert('hey')
+              alert('hey');
+            });
+          this.el.addEventListener("touchstart", function(e) {
+              alert('hey');
             });
           }
       });
