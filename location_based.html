@@ -50,7 +50,11 @@
    <img hidden="hidden"  id="image_1" src="../567_2.jpg" onclick="hide_image();">
 </div>
 <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
-    
+     <a-assets>
+    <img id="my-image" src="../567_1.jpg">
+  </a-assets>
+
+ 
     <a-entity id="rig" position="25 10 0">
         <a-camera  rotation-reader gps-new-camera='gpsMinDistance: 5' position="0 5 0" >
            
@@ -68,9 +72,9 @@
 <!--  material='color: green' 
  geometry='primitive: box'  -->
  gps-new-entity-place="latitude: 34.859799629840374; longitude: 33.5917280975357;"
- scale="5 5 5" 
- position="0 30 0">
- <a-image src="../567_1.jpg"></a-image>
+<!--  scale="5 5 5" 
+ position="0 30 0"> -->
+ <a-image src="#my-image"></a-image>
  </a-entity>
 <a-entity cursor="rayOrigin:mouse"></a-entity>
         <a-entity laser-controls="hand: right"></a-entity>
