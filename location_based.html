@@ -25,8 +25,12 @@
 
 
   function view_image(){
-   alert('image coming');
-   document.getElementById('image_1').hidden=false;
+   if(document.getElementById('image_1').hidden == false){
+    document.getElementById('image_1').hidden=true;
+   }
+    else{ 
+    document.getElementById('image_1').hidden=false;
+   }
   }
 </script>
 
