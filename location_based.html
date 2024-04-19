@@ -16,17 +16,23 @@
         init: function() {
          console.log(this);
           this.el.addEventListener("click", function(e) {
-              alert('hey');
+              view_image();
             });
        
          console.log(this);
           }
       });
+
+
+  function view_image(){
+   document.getElementById('image_1').hidden="false";
+  }
 </script>
 
 
     
 <body>
+ <img id="image_1" src="./567_1.jpg" hidden="true" style="width:100%; ">
 <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
     
     <a-entity id="rig" position="25 10 0">
