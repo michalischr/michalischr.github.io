@@ -40,6 +40,41 @@
     <div><a href="cam_5.html">mindar face tracking</a></div>
 <br>
     <div><a href="cam_6.html">mindar face tracking mashing</a></div>
+
+
+
+<br>
+    <div onclick="open-modal();">modal pop up </div>
+
+
+    <div class="modal fade" id="guide_modal">
+        <div class="modal-dialog modal-dialog-bottom">
+            <div class="modal-content">
+                <button id="close_button_top" type="button" class="close" data-dismiss="modal"></button>
+                <!-- Modal Body -->
+                <div class="modal-body py-35px px-15px">
+                    <h4 class="fs-22 fw-300 font-italic font-noto mb-20px lh-1-5">body</h4>
+                    <div class="row gutters-5">
+                        <div class="col-6">
+                            <button id="close_button" type="button" class="btn btn-block btn-outline-default">return</button>
+                        </div>
+                        <div class="col-6">
+                            <button id="continue_button" type="button" class="btn btn-block btn-primary">continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
 </body>
+
+    <script>
+        function open_modal(){
+            $('#guide_modal').modal('show');
+        }
+    </script>
   
 </html>
